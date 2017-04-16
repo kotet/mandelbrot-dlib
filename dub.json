@@ -1,0 +1,12 @@
+{
+	"name": "mandelbrot-dlib",
+	"authors": [
+		"kotet"
+	],
+	"dependencies": {
+		"dlib": "~>0.10.1"
+	},
+	"description": "Simple mandelbrot with dlib",
+	"copyright": "Copyright © 2017, kotet",
+	"license": "MIT"
+}
