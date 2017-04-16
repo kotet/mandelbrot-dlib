@@ -13,6 +13,7 @@
 
 # Executables
 *.exe
+mandelbrot-dlib
 
 # DUB
 .dub
@@ -25,3 +26,6 @@ docs/
 
 #Test
 __test__*__
+
+#Output
+*.png
