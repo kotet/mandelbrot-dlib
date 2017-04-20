@@ -41,10 +41,11 @@ SuperImage draw(real center_x, real center_y, real height, real width, uint row,
 		uint column, size_t judge_iter)
 {
 	import dlib.image : hsv, image;
+	import std.parallelism : parallel;
 	import std.range : iota;
 
 	auto img = image(row, column);
-	foreach (x; 0 .. row)
+	foreach (x; iota(row).parallel)
 		foreach (y; 0 .. column)
 		{
 			Complex!real c;
