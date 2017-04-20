@@ -3,9 +3,9 @@ import std.complex : Complex;
 
 void main(string[] args)
 {
+	import dlib.image : savePNG;
 	import std.getopt : defaultGetoptPrinter, getopt, GetOptException,
 		GetoptResult;
-	import dlib.image : savePNG;
 
 	real center_x = -0.7;
 	real center_y = 0.0;
@@ -40,7 +40,7 @@ void main(string[] args)
 SuperImage draw(real center_x, real center_y, real height, real width, uint row,
 		uint column, size_t judge_iter)
 {
-	import dlib.image : image, hsv;
+	import dlib.image : hsv, image;
 	import std.range : iota;
 
 	auto img = image(row, column);
@@ -63,7 +63,7 @@ SuperImage draw(real center_x, real center_y, real height, real width, uint row,
 */
 size_t judge(Complex!real c, size_t judge_iter)
 {
-	import std.complex : complex, abs;
+	import std.complex : abs, complex;
 
 	auto z = complex!real(0, 0);
 
